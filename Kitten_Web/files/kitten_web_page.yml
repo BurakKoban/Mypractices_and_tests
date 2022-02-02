@@ -18,7 +18,7 @@ Resources:
              yum update -y
              yum install httpd -y
              yum install git -y
-             git clone https://github.com/BurakKoban/Aws-Projects /var/www/html/
+             sudo git clone https://github.com/BurakKoban/Mypractices_and_tests /var/www/html/
              cp /var/www/html/Kitten_Web/* /var/www/html
              systemctl start httpd
              systemctl enable httpd
