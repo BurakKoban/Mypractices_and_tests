@@ -1,0 +1,15 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: |
+  This template launches an EC2 with a security group that enables SSH
+Resources:
+  MyEc2:
+    Type: AWS::EC2::Instance
+    Properties:
+      ImageId: ami-0a8b4cd432b1c3063 # most recent ami id of Amazon Linux2
+      InstanceType: t2.micro
+      KeyName: burakawskey # pem file name without extension
+      SecurityGroups:
+        - launch-wizard-1 # security group name that allows SSH
+      Tags:
+        - Key: Name
+          Value: First-Cf-Stack-Instance
